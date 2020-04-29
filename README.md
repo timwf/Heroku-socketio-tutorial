@@ -22,7 +22,25 @@ I will be using npm to install the required packages in the root folder — 
 
 ### Step Three — Folder structure
 Create-react-app should have created a “src” folder — Create a new folder in the “”src” folder and name it “server” create a file within that folder and name it “index.js”
+![Image](https://github.com/timwf/Heroku-socketio-tutorial/blob/master/readme-images/image%208.png)
 
+
+
+### Step Four — Create your server
+Copy and paste the below code into your newly created index.js file-
+
+    const express = require('express');
+    const path = require('path');
+    const app = express();
+    const server = require('http').createServer(app);
+    const io = require('socket.io')(server);
+    const port = process.env.PORT || 3001;
+    app.use(express.static(path.join(__dirname, '../../build')));
+    app.get('/', (req, res, next) => res.sendFile(__dirname + './index.html'));
+    io.on('connection', function(socket){
+    io.emit('message from server', 'message from server - it works!')
+    })
+    server.listen(port);
 
 Tutorial can be found at 
 
