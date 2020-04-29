@@ -8,10 +8,21 @@
 **This step by step tutorial is aimed at developers with limited knowledge of back end technologies and is by no means intended for production of commercial apps — it will help you get your shiny new app up and running in the most basic way in my opinion.**
 
 
-## Step one — create a react app
+### Step one — create a react app
 Create a react app in your chosen directory…
 
     npx create-react-app socket-messaging-app
+   
+   
+### Step two — install your dependencies
+I will be using npm to install the required packages in the root folder — make sure you cd into your root (socket-messaging-app in my case)
+
+    cd socket-messaging-app
+    npm install express socket.io socket.io-client`
+
+### Step Three — Folder structure
+Create-react-app should have created a “src” folder — Create a new folder in the “”src” folder and name it “server” create a file within that folder and name it “index.js”
+
 
 Tutorial can be found at 
 
