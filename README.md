@@ -1,6 +1,6 @@
 # Repository Supporting react + socket.io + nodeJs + Heroku Deployment
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image](https://github.com/timwf/Heroku-socketio-tutorial/blob/master/readme-images/Group%201.png)
 
 Tutorial can be found at 
 
