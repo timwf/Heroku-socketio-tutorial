@@ -114,6 +114,11 @@ Next lets create the app in the terminal..
 
     heroku create
 
+
+You will be given a unique url for your project now lets deploy! In the terminal run
+
+    git push heroku master
+
 Once the app has successfully deployed run
 
     heroku open
