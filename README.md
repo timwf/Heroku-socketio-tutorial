@@ -29,7 +29,7 @@ Create-react-app should have created a “src” folder — Create a new folder 
 
 ### Step Four — Create your server
 Copy and paste the below code into your newly created index.js file-
-
+```js
     const express = require('express');
     const path = require('path');
     const app = express();
@@ -42,13 +42,14 @@ Copy and paste the below code into your newly created index.js file-
     io.emit('message from server', 'message from server - it works!')
     })
     server.listen(port);
-    
+```
 This creates your express server and will use the built react app as its location (we haven't built the app just yet).
  
  
 ### Step Five — amend the React App.
 Move back down to your src folder and locate the index.js file created by React. You will need to import the socket.io-client module and add the socket listening event from the server — your code should like this…
 
+```jsx
     import React from 'react';
     import ReactDOM from 'react-dom';
     import './index.css';
@@ -69,6 +70,7 @@ Move back down to your src folder and locate the index.js file created by React.
     // unregister() to register() below. Note this comes with some pitfalls.
     // Learn more about service workers: https://bit.ly/CRA-PWA
     serviceWorker.unregister();
+```
  
 ### Step Six — configure package.json and add Procfile
 Heroku requires a Procfile for this to work. Move back into your root directory (socket-messaging-app in my case) and create a file named “Procfile” (no extension). Within this file add the following code:
